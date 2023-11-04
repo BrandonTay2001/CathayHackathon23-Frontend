@@ -1,15 +1,15 @@
 import * as React from "react";
 import {useState} from "react";
 import moment from "moment";
-import {AppBar, Button, IconButton, ListItemAvatar, ListItemButton, Toolbar} from "@mui/material";
+import {AppBar, Button, Fab, IconButton, ListItemAvatar, ListItemButton, Toolbar} from "@mui/material";
 import Footer from "../components/Footer";
-import {Create, Delete, Description, Done, Edit} from "@mui/icons-material";
+import {Add, AutoFixHigh, Create, Delete, Description, Done, Edit} from "@mui/icons-material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Avatar from "@mui/material/Avatar";
 import {Plan} from "../types/Plan";
-import update from 'immutability-helper';
+import update from "immutability-helper";
 import {useLocalStorage} from "react-use";
 import PlanCreate from "../components/PlanCreate";
 import Empty from "../components/generic/Empty";
@@ -84,6 +84,12 @@ export default function Plans() {
                 </IconButton>
             </Toolbar>
         </AppBar>
+        <div className={"p-4 bg-[url(/cx-cover.png)] bg-center bg-cover"}>
+            <div className={"font-bold"}>Feeling adventurous?</div>
+            <div className={"text-xs"}>Start planning your trip from scratch or from a template generated with our AI
+                trip planner.
+            </div>
+        </div>
         <div className={"flex-1 overflow-scroll"}>
             {
                 plans?.length === 0 && <Empty desc={"Create travel plan using the button below."}/>
@@ -120,12 +126,10 @@ export default function Plans() {
                 </List>
             }
         </div>
-        <Button variant={"outlined"}
-                startIcon={<Create/>}
-                className={"m-4"}
-                onClick={() => setPlanCreateOpen(true)}>
-            Create New Travel Plan
-        </Button>
+        <Fab color="primary" variant={"circular"} className={"m-4 right-0 bottom-20 fixed z-10"}
+             onClick={() => setPlanCreateOpen(true)}>
+            <Add/>
+        </Fab>
         <Footer/>
     </div>;
 }

@@ -95,7 +95,7 @@ export default function PlanEdit(props: {
             {/*<div className={"bg-[#006b6e] p-2 bg-[url('/cx-cover.jpg')]"}>*/}
             <div className={"bg-gradient-to-br from-[#006b6e] to-white/10 p-4"}>
                 <img className={"w-32"} src={"cx-logo-white.png"}/>
-                <div className={"text-sm"}>Get tickets to Sapporo for as low as HKD1,600</div>
+                <div className={"text-sm"}>Get tickets to {props.plan.city.name} for as low as HKD1,600</div>
                 <div className={"h-4"}></div>
                 <Button className={"w-full"} size={"small"} variant="contained" startIcon={<AirplaneTicketIcon/>}>
                     View Tickets
