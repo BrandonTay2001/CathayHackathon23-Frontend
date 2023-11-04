@@ -134,12 +134,12 @@ export default function PlanCreate(props: {
                                    onChange={(newValue) => {
                                        setTimeRange(newValue);
                                    }}
-                                   renderInput={(startProps, endProps) => (
-                                       <div className={"flex gap-4"}>
-                                           <TextField {...startProps} />
-                                           <TextField {...endProps} />
-                                       </div>
-                                   )}
+                                   // renderInput={(startProps, endProps) => (
+                                   //     <div className={"flex gap-4"}>
+                                   //         <TextField {...startProps} />
+                                   //         <TextField {...endProps} />
+                                   //     </div>
+                                   // )}
             />
         </LocalizationProvider>
         <Button startIcon={<Create/>} variant="outlined" size={"large"} className={"mt-16"}

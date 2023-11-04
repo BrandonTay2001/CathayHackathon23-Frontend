@@ -1,6 +1,6 @@
-import * as React from 'react';
-import {useEffect, useState} from 'react';
-import Button from '@mui/material/Button';
+import * as React from "react";
+import {useEffect, useState} from "react";
+import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import {Delete, ExpandMore} from "@mui/icons-material";
 import {DateTimePicker} from "@mui/x-date-pickers";
@@ -92,7 +92,7 @@ export default function EditEventDrawer(props: {
                                 }
                                 props.setEvent({...props.event, from: newFrom});
                             }}
-                            renderInput={(params) => <TextField {...params} />}
+                            // renderInput={(params: any) => <TextField {...params} /> as any}
                         />
                         <DateTimePicker
                             label="To"
@@ -105,7 +105,7 @@ export default function EditEventDrawer(props: {
                                 }
                                 props.setEvent({...props.event, to: newTo});
                             }}
-                            renderInput={(params) => <TextField {...params} />}
+                            // renderInput={(params) => <TextField {...params} />}
                         />
                     </div>
                 </LocalizationProvider>

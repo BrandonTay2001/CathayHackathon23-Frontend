@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {useState} from 'react';
+import * as React from "react";
+import {useState} from "react";
 import {
     Checkbox,
     FormControl,
@@ -27,8 +27,8 @@ export default function PlannerDrawer(props: {
     onGenerate: (events: PlanEvent[]) => void
 }) {
     const {enqueueSnackbar} = useSnackbar();
-    const paces = ["Slow Paced", "Normal", "Fast Paced"];
-    const [pace, setPace] = useState(paces[1]);
+    const paces: ("Slow Paced" | "Normal" | "Fast Paced")[] = ["Slow Paced", "Normal", "Fast Paced"];
+    const [pace, setPace] = useState<"Slow Paced" | "Normal" | "Fast Paced">(paces[1]);
     const [tags, setTags] = useState<string[]>([]);
 
     const [generating, setGenerating] = useState(false);
@@ -58,7 +58,8 @@ export default function PlannerDrawer(props: {
             !generating && <>
                 <div className={"flex flex-col place-items-center text-center mb-4"}>
                     <div className={"text-xl font-bold"}>Trip Planner</div>
-                    <div>Give us your preferences and our AI planning engine will generate you a customized travel plan.</div>
+                    <div>Give us your preferences and our AI planning engine will generate you a customized travel plan.
+                    </div>
                 </div>
                 <ToggleButtonGroup exclusive
                                    color="primary"
