@@ -15,7 +15,7 @@ export default function Login() {
                playsInline={true}
         >
             <source src="/bg_compressed.mp4" type="video/mp4"/>
-        </video>you
+        </video>
         <div
             className={"absolute w-screen h-screen bg-black/50 flex flex-col place-items-center place-content-center gap-2 p-4"}>
             <img className={"w-32"} src={"/logo-travelmate.svg"}/>
