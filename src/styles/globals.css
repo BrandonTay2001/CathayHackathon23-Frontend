@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+    user-select: none;
+    position: fixed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.safearea {
+    min-height: calc(100% + env(safe-area-inset-top));
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+/*TEMP FIX*/
+.bottom-safe-area {
+    width: 100%;
+    /*height: env(safe-area-inset-bottom);*/
+}
+
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+    .bottom-safe-area {
+        height: 20px;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.MuiTabs-scrollButtons.Mui-disabled {
+    opacity: 0.3;
+}
+
+.MuiDrawer-paper {
+    background: transparent;
+}
