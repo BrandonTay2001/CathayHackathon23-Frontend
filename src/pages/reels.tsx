@@ -17,7 +17,7 @@ export default function Reels() {
         <FullPostDrawer open={postOpened} setOpen={setPostOpened} reel={selPost!}/>
         <div
             className={"absolute top-0 w-full p-4 flex place-items-center place-content-center z-10 bg-gradient-to-b from-black/50 via-black/20 to-transparent"}>
-            <img src={"/logo.png"} className={"h-8 drop-shadow-xl"}></img>
+            <img src={"/logo-travelmate.svg"} className={"h-8 drop-shadow-xl"}></img>
         </div>
         <div className={"w-full flex-1 overflow-y-scroll snap-y snap-mandatory"} ref={ref}>
             {
