@@ -4,8 +4,16 @@ import TextField from "@mui/material/TextField";
 
 export default function Login() {
     return <div className={"w-screen h-screen"}>
-        <video autoPlay muted loop className={"w-full h-full absolute inset-0 object-cover"}>
-            <source src="/3198087859.mp4" type="video/mp4"/>
+        <video className={"w-full h-full absolute inset-0 object-cover"}
+               autoPlay={true}
+               muted={true}
+               loop={true}
+               controls={false}
+               disablePictureInPicture={true}
+               disableRemotePlayback={true}
+               playsInline={true}
+        >
+            <source src="/bg_compressed.mp4" type="video/mp4"/>
         </video>
         <div
             className={"absolute w-screen h-screen bg-black/50 flex flex-col place-items-center place-content-center gap-2 p-4"}>
