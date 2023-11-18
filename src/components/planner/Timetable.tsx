@@ -106,7 +106,7 @@ export default function Timetable(props: {
                                         borderColor: colour
                                     }}
                                     onClick={() => {
-                                        props.onClickEvent(null)
+                                        // props.onClickEvent(null)
                                         //TODO
                                         // setEditingEventId(i);
                                         // setEditOpen(true);

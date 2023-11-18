@@ -89,7 +89,8 @@ export default function PlanEdit(props: {
                 !timetableOpened && <CardList plan={props.plan}/>
             }
             {
-                timetableOpened && <Timetable plan={props.plan} onClickEvent={null}/>
+                timetableOpened && <Timetable plan={props.plan} onClickEvent={e => {
+                }}/>
             }
         </div>
     </Frag>;

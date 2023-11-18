@@ -23,10 +23,10 @@ const EventCard = (props: {
     const e = props.event;
 
     const tag = PlaceTags.find(o => o.otmTags.find(t => e.tags.includes(t)))!;
-    const decimalHash = (text: string) => {
+    const decimalHash = (msg: string) => {
         let sum = 0;
-        for (let i = 0; i < text.length; i++)
-            sum += (i + 1) * text.codePointAt(i) / (1 << 8);
+        for (let i = 0; i < msg.length; i++)
+            sum += (i + 1) * msg.codePointAt(i)! / (1 << 8);
         return sum % 1;
     };
     const canUseAsiaMiles = decimalHash(e.name) < 0.2;
