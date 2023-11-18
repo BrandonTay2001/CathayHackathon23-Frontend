@@ -1,7 +1,7 @@
-import {Reel} from "../types/Reel";
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
-import {FragDrawer} from "./generic/FragDrawer";
+import {Reel} from "../../types/Reel";
+import {FragDrawer} from "../generic/FragDrawer";
 
 export default function FullPostDrawer(props: {
     open: boolean,

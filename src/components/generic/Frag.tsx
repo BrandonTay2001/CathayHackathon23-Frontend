@@ -18,7 +18,8 @@ export default function Frag(props: React.PropsWithChildren<{
     open: boolean,
     setOpen: (open: boolean) => void
     className?: string,
-    noPad?: boolean
+    noPad?: boolean,
+    buttons?: React.ReactNode
 }>) {
     return <Dialog fullScreen
                    open={props.open}
@@ -30,6 +31,9 @@ export default function Frag(props: React.PropsWithChildren<{
                 <div className={"text-xl font-bold flex-1"}>
                     {props.title}
                 </div>
+                {
+                    props.buttons
+                }
                 <IconButton size={"large"}
                             onClick={() => props.setOpen(false)}>
                     <Close/>

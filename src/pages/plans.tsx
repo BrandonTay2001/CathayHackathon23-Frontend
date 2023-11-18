@@ -1,9 +1,9 @@
 import * as React from "react";
 import {useState} from "react";
 import moment from "moment";
-import {AppBar, Button, Fab, IconButton, ListItemAvatar, ListItemButton, Toolbar} from "@mui/material";
+import {AppBar, Fab, IconButton, ListItemAvatar, ListItemButton, Toolbar} from "@mui/material";
 import Footer from "../components/Footer";
-import {Add, AutoFixHigh, Create, Delete, Description, Done, Edit} from "@mui/icons-material";
+import {Add, Delete, Description, Done, Edit} from "@mui/icons-material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -11,10 +11,10 @@ import Avatar from "@mui/material/Avatar";
 import {Plan} from "../types/Plan";
 import update from "immutability-helper";
 import {useLocalStorage} from "react-use";
-import PlanCreate from "../components/PlanCreate";
 import Empty from "../components/generic/Empty";
-import PlanEdit from "../components/PlanEdit";
 import {useSnackbar} from "notistack";
+import PlanCreate from "../components/planner/PlanCreate";
+import PlanEdit from "../components/planner/PlanEdit";
 
 export default function Plans() {
     const {enqueueSnackbar, closeSnackbar} = useSnackbar();

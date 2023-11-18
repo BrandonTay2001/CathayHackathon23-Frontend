@@ -1,16 +1,11 @@
 import * as React from "react";
 import {useEffect, useRef, useState} from "react";
-import {Reel} from "../types/Reel";
-import {ReelCard} from "../components/ReelCard";
-import Footer from "../components/Footer";
-import FullPostDrawer from "../components/FullPostDrawer";
-import useFetch from "../utils/useFetch";
 
 export default function Index() {
 
     const [prompt, setPrompt] = useState<any | null>(null);
     useEffect(() => {
-        window.addEventListener('beforeinstallprompt', (e) => {
+        window.addEventListener("beforeinstallprompt", (e) => {
             setPrompt(e);
         });
     }, []);
@@ -22,7 +17,7 @@ export default function Index() {
                     if (prompt !== null) {
                         prompt.prompt();
                         const {outcome} = await prompt.userChoice;
-                        if (outcome === 'accepted') {
+                        if (outcome === "accepted") {
                             setPrompt(null);
                         }
                     }

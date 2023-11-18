@@ -5,12 +5,10 @@ import TextField from "@mui/material/TextField";
 import moment from "moment";
 import {AdapterMoment} from "@mui/x-date-pickers/AdapterMoment";
 import {Autocomplete, Button} from "@mui/material";
-import {AutoFixHigh, Create} from "@mui/icons-material";
-import Cities from "../data/Cities";
-import Frag from "./generic/Frag";
-import {Plan} from "../types/Plan";
+import {Create} from "@mui/icons-material";
 import {useSnackbar} from "notistack";
-import useFetch from "../utils/useFetch";
+import {Plan} from "../../types/Plan";
+import Frag from "../generic/Frag";
 
 export default function PlanCreate(props: {
     open: boolean,

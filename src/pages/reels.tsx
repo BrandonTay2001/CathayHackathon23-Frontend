@@ -1,10 +1,10 @@
 import * as React from "react";
 import {useRef, useState} from "react";
 import {Reel} from "../types/Reel";
-import {ReelCard} from "../components/ReelCard";
 import Footer from "../components/Footer";
-import FullPostDrawer from "../components/FullPostDrawer";
 import useFetch from "../utils/useFetch";
+import FullPostDrawer from "../components/reels/FullPostDrawer";
+import {ReelCard} from "../components/reels/ReelCard";
 
 export default function Reels() {
     const [postOpened, setPostOpened] = useState(false);

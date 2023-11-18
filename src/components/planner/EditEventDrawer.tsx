@@ -7,12 +7,12 @@ import {DateTimePicker} from "@mui/x-date-pickers";
 import moment from "moment";
 import {AdapterMoment} from "@mui/x-date-pickers/AdapterMoment";
 import {LocalizationProvider} from "@mui/x-date-pickers-pro";
-import {PlanEvent} from "../types/PlanEvent";
 import {useSnackbar} from "notistack";
-import {Plan} from "../types/Plan";
 import {Accordion, AccordionDetails, AccordionSummary, Skeleton} from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {FragDrawer} from "./generic/FragDrawer";
+import {Plan} from "../../types/Plan";
+import {PlanEvent} from "../../types/PlanEvent";
+import {FragDrawer} from "../generic/FragDrawer";
 
 export default function EditEventDrawer(props: {
     open: boolean,

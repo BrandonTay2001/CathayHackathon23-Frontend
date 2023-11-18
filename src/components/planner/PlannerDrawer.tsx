@@ -10,15 +10,16 @@ import {
     ToggleButtonGroup
 } from "@mui/material";
 import {AutoFixHigh} from "@mui/icons-material";
-import {Plan} from "../types/Plan";
-import {PlanEvent} from "../types/PlanEvent";
-import {FragDrawer} from "./generic/FragDrawer";
 import Button from "@mui/material/Button";
-import ms from "../utils/ms";
-import Orb from "./effects/Orb";
-import Planner from "../ai/Planner";
 import {useSnackbar} from "notistack";
-import PlaceTags from "../data/PlaceTags";
+import Orb from "../effects/Orb";
+import {FragDrawer} from "../generic/FragDrawer";
+import {Plan} from "../../types/Plan";
+import {PlanEvent} from "../../types/PlanEvent";
+import ms from "../../utils/ms";
+import Planner from "../../ai/Planner";
+import PlaceTags from "../../data/PlaceTags";
+import TextField from "@mui/material/TextField";
 
 export default function PlannerDrawer(props: {
     open: boolean,
@@ -29,17 +30,18 @@ export default function PlannerDrawer(props: {
     const {enqueueSnackbar} = useSnackbar();
     const paces: ("Slow Paced" | "Normal" | "Fast Paced")[] = ["Slow Paced", "Normal", "Fast Paced"];
     const [pace, setPace] = useState<"Slow Paced" | "Normal" | "Fast Paced">(paces[1]);
-    const [tags, setTags] = useState<string[]>([]);
+    // const [tags, setTags] = useState<string[]>([]);
+    const [prompt, setPrompt] = useState<string>("A romantic trip with nature and history.");
 
     const [generating, setGenerating] = useState(false);
     const onGenerate = async () => {
-        if (tags.length === 0) {
-            enqueueSnackbar("Please select at least one preference.");
+        if (prompt === "") {
+            enqueueSnackbar("Please enter a prompt.");
             return;
         }
         setGenerating(true);
-        await ms(4000);
-        const events = await Planner(props.plan, tags, pace);
+        // await ms(4000);
+        const events = await Planner(props.plan, prompt, pace);
 
         if (!events) {
             enqueueSnackbar("Unable to generate a plan. Please modify the options and try again.");
@@ -47,9 +49,9 @@ export default function PlannerDrawer(props: {
             return;
         }
         props.onGenerate(events);
-        await ms(1000);
+        // await ms(1000);
         props.setOpen(false);
-        await ms(1000);
+        // await ms(1000);
         setGenerating(false);
     };
 
@@ -61,6 +63,13 @@ export default function PlannerDrawer(props: {
                     <div>Give us your preferences and our AI planning engine will generate you a customized travel plan.
                     </div>
                 </div>
+                <TextField label="Prompt"
+                           multiline
+                           rows={4}
+                           value={prompt}
+                           onChange={e => setPrompt(e.target.value)}
+                           placeholder={"A romantic trip with nature and history."}
+                />
                 <ToggleButtonGroup exclusive
                                    color="primary"
                                    size={"small"}
@@ -71,32 +80,6 @@ export default function PlannerDrawer(props: {
                                    }}>
                     {paces.map((o, i) => <ToggleButton key={i} value={o} className={"flex-1"}>{o}</ToggleButton>)}
                 </ToggleButtonGroup>
-                <FormControl component="fieldset" variant="standard">
-                    <FormLabel component="legend">Types of Places/Activities</FormLabel>
-                    <FormGroup className={"grid grid-cols-2"}>
-                        {
-                            PlaceTags.filter(o => !o.hidden).map((o, i) =>
-                                <FormControlLabel key={i}
-                                                  control={
-                                                      <Checkbox checked={tags.includes(o.tag)}
-                                                                onClick={e => {
-                                                                    if (!tags.includes(o.tag)) {
-                                                                        setTags([...tags, o.tag]);
-                                                                    } else {
-                                                                        let t = [...tags];
-                                                                        t.splice(t.indexOf(o.tag), 1);
-                                                                        setTags(t);
-                                                                    }
-                                                                }}
-                                                                name={o.tag}
-                                                      />
-                                                  }
-                                                  label={o.tag}
-                                />
-                            )
-                        }
-                    </FormGroup>
-                </FormControl>
             </>
         }
         {

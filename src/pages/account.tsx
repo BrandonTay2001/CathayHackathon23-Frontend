@@ -8,8 +8,6 @@ import {AccountCircle} from "@mui/icons-material";
 
 export default function Account() {
 
-    const [page, setPage] = useState<"Home" | "CurrencyExchange">("Home");
-
     return <div className={"w-screen h-screen relative flex flex-col bg-neutral-900"}>
         <AppBar position="static">
             <Toolbar className={"pr-2"}>

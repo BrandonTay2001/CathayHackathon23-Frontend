@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import CurrencyExchange from "../components/CurrencyExchange";
+import CurrencyExchange from "../components/tools/CurrencyExchange";
 
 export default function Toolbox() {
 
@@ -25,24 +25,21 @@ export default function Toolbox() {
             <Card>
                 <CardActionArea onClick={() => setPage("CurrencyExchange")}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Currency Exchange Tool
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <div className={"font-bold text-lg"}>Currency Exchange Tool</div>
+                        <div className={"mt-2"}>
                             Instantly converts the foreign currency to your local currency during your travel
-                        </Typography>
+                        </div>
                     </CardContent>
                 </CardActionArea>
             </Card>
             <Card>
                 <CardActionArea onClick={() => setPage("CurrencyExchange")}>
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            Translator
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Instantly translates words, phrases, and web pages between English and over 100 other languages
-                        </Typography>
+                        <div className={"font-bold text-lg"}>Translator</div>
+                        <div className={"mt-2"}>
+                            Instantly translates words, phrases, and web pages between English and over 100 other
+                            languages
+                        </div>
                     </CardContent>
                 </CardActionArea>
             </Card>

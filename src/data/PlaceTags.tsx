@@ -1,14 +1,14 @@
 import React from "react";
 import {
-    Attractions,
-    Camera,
-    Forest,
-    Foundation,
-    Museum,
-    Restaurant,
-    ShoppingBag,
-    TheaterComedy
-} from "@mui/icons-material";
+    MdAttractions,
+    MdCamera,
+    MdForest,
+    MdFoundation,
+    MdMuseum,
+    MdRestaurant,
+    MdShoppingBag,
+    MdTheaterComedy
+} from "react-icons/md";
 
 const PlaceTags: {
     tag: string,
@@ -19,49 +19,49 @@ const PlaceTags: {
     {
         tag: "Dining",
         otmTags: ["restaurants"],
-        icon: <Restaurant fontSize={"small"}/>,
+        icon: <MdRestaurant className={"text-sm"}/>,
         hidden: true
     },
     {
         tag: "Amusements",
         otmTags: ["amusements"],
-        icon: <Attractions fontSize={"small"}/>
+        icon: <MdAttractions fontSize={"small"}/>
 
     },
     {
         tag: "Shopping",
         otmTags: ["shops"],
-        icon: <ShoppingBag fontSize={"small"}/>
+        icon: <MdShoppingBag fontSize={"small"}/>
     },
     {
         tag: "Photo-taking",
         otmTags: ["view_points"],
-        icon: <Camera fontSize={"small"}/>
+        icon: <MdCamera fontSize={"small"}/>
     },
     {
         tag: "Museums",
         otmTags: ["museums"],
-        icon: <Museum fontSize={"small"}/>
+        icon: <MdMuseum fontSize={"small"}/>
     },
     {
         tag: "Nature",
         otmTags: ["natural"],
-        icon: <Forest fontSize={"small"}/>
+        icon: <MdForest fontSize={"small"}/>
     },
     {
         tag: "Historic Heritage",
         otmTags: ["historic_architecture", "historic_object"],
-        icon: <Foundation fontSize={"small"}/>
+        icon: <MdFoundation fontSize={"small"}/>
     },
     {
         tag: "Performances",
         otmTags: ["theatres_and_entertainments"],
-        icon: <TheaterComedy fontSize={"small"}/>
+        icon: <MdTheaterComedy fontSize={"small"}/>
     },
     {
         tag: "Architecture",
         otmTags: ["historic_architecture"],
-        icon: <Foundation fontSize={"small"}/>
+        icon: <MdFoundation fontSize={"small"}/>
     },
 ];
 export default PlaceTags;

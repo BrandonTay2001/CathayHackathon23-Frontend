@@ -3,9 +3,10 @@ import Button from "@mui/material/Button";
 import {ContentCopy, FavoriteBorder, KeyboardArrowRight} from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
 import * as React from "react";
-import {useCallback, useEffect, useRef, useState} from "react";
-import {Reel} from "../types/Reel";
+import {useCallback, useRef} from "react";
 import {useInView} from "react-intersection-observer";
+import {Reel} from "../../types/Reel";
+import {MdContentCopy, MdEdit, MdFavoriteBorder, MdNoteAdd} from "react-icons/md";
 
 export function ReelCard(props: {
     post: Reel,
@@ -26,7 +27,6 @@ export function ReelCard(props: {
     //     else
     //         ref.current?.pause();
     // }, [inView]);
-
 
     return <div
         className={"w-full h-full snap-start flex-1 relative overflow-hidden flex place-items-center place-content-center mb-2"}>
@@ -56,8 +56,8 @@ export function ReelCard(props: {
                             onClick={props.onViewPost}>
                         View Post
                     </Button>
-                    <IconButton><FavoriteBorder/></IconButton>
-                    <IconButton><ContentCopy/></IconButton>
+                    <IconButton><MdFavoriteBorder/></IconButton>
+                    <IconButton><MdNoteAdd/></IconButton>
                 </div>
             </div>
         </div>
