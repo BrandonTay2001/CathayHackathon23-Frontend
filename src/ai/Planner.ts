@@ -123,7 +123,7 @@ export default async function Planner(
     pace: "Slow Paced" | "Normal" | "Fast Paced"
 ): Promise<PlanEvent[] | null> {
     //send JSON post request
-    const res = await fetch("http://172.206.226.139:3002/generate_plan", {
+    const res = await fetch("/api/generate_plan", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -1,7 +1,7 @@
-/** @type {import('next').NextConfig} */
-const withPWA = require('next-pwa')({
-  dest: 'public',
-})
+/** @type {import("next").NextConfig} */
+const withPWA = require("next-pwa")({
+    dest: "public",
+});
 
 // module.exports = withPWA({
 //   typescript: {
@@ -12,4 +12,14 @@ const withPWA = require('next-pwa')({
 //     ignoreBuildErrors: true,
 //   },
 // })
-module.exports = {};
+
+module.exports = {
+    async rewrites() {
+        return [
+            {
+                source: "/api/generate_plan",
+                destination: "http://172.206.226.139:3002/generate_plan",
+            },
+        ];
+    },
+};
