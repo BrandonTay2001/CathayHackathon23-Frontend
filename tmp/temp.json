@@ -1,0 +1,68 @@
+[
+  {
+    "endTime": "2023-11-18T10:00:00.000Z",
+    "name": "Victoria Peak",
+    "reason": "This is the highest point in Hong Kong, offering a breathtaking view of the city.",
+    "startTime": "2023-11-18T09:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-18T13:00:00.000Z",
+    "name": "Lunch at Tim Ho Wan",
+    "reason": "This is a popular dim sum restaurant that serves delicious food at affordable prices.",
+    "startTime": "2023-11-18T12:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-18T16:00:00.000Z",
+    "name": "Ocean Park",
+    "reason": "This is a popular theme park with thrilling rides and attractions.",
+    "startTime": "2023-11-18T14:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-18T20:00:00.000Z",
+    "name": "Dinner at Jumbo Kingdom",
+    "reason": "This is a famous floating restaurant that serves delicious seafood dishes.",
+    "startTime": "2023-11-18T19:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-19T12:00:00.000Z",
+    "name": "Lamma Island",
+    "reason": "This is a beautiful island with scenic hiking trails and beaches.",
+    "startTime": "2023-11-19T09:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-19T14:00:00.000Z",
+    "name": "Lunch at Rainbow Seafood Restaurant",
+    "reason": "This is a popular seafood restaurant with a stunning view of the sea.",
+    "startTime": "2023-11-19T13:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-19T17:00:00.000Z",
+    "name": "Dragon's Back Hike",
+    "reason": "This is a popular hiking trail with stunning views of the city and the sea.",
+    "startTime": "2023-11-19T15:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-19T20:00:00.000Z",
+    "name": "Dinner at Lan Kwai Fong",
+    "reason": "This is a popular nightlife district with a wide variety of restaurants and bars.",
+    "startTime": "2023-11-19T19:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-20T11:00:00.000Z",
+    "name": "Ngong Ping 360",
+    "reason": "This is a cable car ride that offers stunning views of the city and the surrounding mountains.",
+    "startTime": "2023-11-20T09:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-20T13:00:00.000Z",
+    "name": "Lunch at Tai O Fishing Village",
+    "reason": "This is a traditional fishing village with a unique stilt house architecture and delicious seafood.",
+    "startTime": "2023-11-20T12:00:00.000Z"
+  },
+  {
+    "endTime": "2023-11-20T15:00:00.000Z",
+    "name": "Sky100 Observation Deck",
+    "reason": "This is an observation deck on the 100th floor of the International Commerce Centre, offering a stunning 360-degree view of the city.",
+    "startTime": "2023-11-20T14:00:00.000Z"
+  }
+]

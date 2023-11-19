@@ -1,0 +1,7 @@
+Pacing: Slow
+Start date: 18/11/2023
+Prompt: I want a romantic trip with lots of nature-related sightseeing
+Destination: Kyoto
+Days: 3
+
+Response (do not include newline characters in response):

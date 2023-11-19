@@ -39,7 +39,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
             />
             <meta name="description" content="Description"/>
             <meta name="keywords" content="Keywords"/>
-            <title>Tripmate</title>
+            <title>TravelMate</title>
 
             <link rel="manifest" href="/manifest.json"/>
             <meta name="theme-color" content="#000000"/>
